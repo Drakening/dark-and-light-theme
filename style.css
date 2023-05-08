@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    transition: background 0.2s linear;
+}
+
+body.dark {
+    background-color: #292c35;
+}
+
+body.dark p {
+    color: white;
+}
+
+.label {
+    background-color: #111;
+    display: flex;
+    border-radius: 50px;
+    height: 35px;
+    width: 70px;
+    padding: 5px;
+    justify-content: space-between;
+    position: relative;
+}
+
+.ball {
+    background-color: white;
+    position: absolute;
+    border-radius: 50%;
+    top: 4px;
+    left: 5px;
+    height: 27px;
+    width: 25px;
+    transition: transform 0.2s linear;
+}
+.checkbox {
+    visibility: hidden;
+    position: absolute;
+}
+.checkbox:checked + .label .ball {
+    transform: translateX(35px);
+}
